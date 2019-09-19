@@ -16,3 +16,8 @@
  :leader
  (:prefix "p"
   :desc "Search" "s" #'+ivy/project-search))
+
+(map!
+ :leader
+ (:prefix "j"
+  :desc "Jump to char" "j" #'avy-goto-char))
