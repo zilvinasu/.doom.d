@@ -6,7 +6,7 @@
 (menu-bar-mode 1)
 (global-visual-line-mode 1)
 
-(setq doom-font (font-spec :family "Cascadia Code" :size 12))
+(setq doom-font (font-spec :family "Cascadia Code" :size 13))
 
 ;; Flycheck
 (eval-after-load 'flycheck '(flycheck-clojure-setup))
