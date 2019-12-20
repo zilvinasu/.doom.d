@@ -14,17 +14,18 @@
   '(setq flycheck-display-errors-function #'flycheck-pos-tip-error-messages))
 
 ;; DAP
-(use-package! dap-mode
-  :after lsp-mode
-  :config
-  (dap-mode 1)
-  (dap-ui-mode 1)
-  (dap-tooltip-mode 1)
-  (tooltip-mode 1))
+(after! lsp-mode
+  (require 'dap-mode))
 
-(use-package! dap-node
-  :after dap-mode
-  :config
+(after! dap-mode
+  (dap-tooltip-mode 1)
+  (tooltip-mode 1)
+  (map!
+   :leader
+   (:prefix "o"
+    :desc "DAP hydra" "h" #'dap-hydra)))
+
+(after! dap-node
   (dap-node-setup)
   (dap-register-debug-template
    "Node::Mocha::Specs"
@@ -42,7 +43,7 @@
 (map!
  :leader
  (:prefix "p"
-  :desc "Search" "s" #'+ivy/project-search))
+  :desc "Search in project" "s" #'+ivy/project-search))
 
 (map!
  :leader

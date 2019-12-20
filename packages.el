@@ -7,4 +7,3 @@
 ;; (package! builtin-package :disable t)
 (package! flycheck-clojure)
 (package! flycheck-pos-tip)
-(package! dap-mode)
