@@ -13,6 +13,31 @@
 (eval-after-load 'flycheck
   '(setq flycheck-display-errors-function #'flycheck-pos-tip-error-messages))
 
+;; DAP
+(use-package! dap-mode
+  :after lsp-mode
+  :config
+  (dap-mode 1)
+  (dap-ui-mode 1)
+  (dap-tooltip-mode 1)
+  (tooltip-mode 1))
+
+(use-package! dap-node
+  :after dap-mode
+  :config
+  (dap-node-setup)
+  (dap-register-debug-template
+   "Node::Mocha::Specs"
+   (list :type "node"
+         :request "launch"
+         :program "/usr/local/bin/mocha"
+         :args (list "**/*.spec.js"
+                     "--inline-diffs"
+                     "--dirty"
+                     "--watch")
+         :env (list :prettyPrint "true")
+         :name "Node::Mocha::Specs")))
+
 ;; Custom Key Bindings
 (map!
  :leader
