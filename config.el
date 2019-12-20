@@ -23,7 +23,8 @@
   (map!
    :leader
    (:prefix "o"
-    :desc "DAP hydra" "h" #'dap-hydra)))
+    :desc "DAP debug" "d d" #'dap-debug
+    :desc "DAP hydra" "d h" #'dap-hydra)))
 
 (after! dap-node
   (dap-node-setup)
