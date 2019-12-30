@@ -33,8 +33,7 @@
    (list :type "node"
          :request "launch"
          :program "/usr/local/bin/mocha"
-         :args (list "--inline-diffs"
-                     "--no-colors"
+         :args (list "--no-colors"
                      (format "%s" buffer-file-name)
                      "--dirty"
                      "--watch")
