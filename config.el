@@ -38,7 +38,6 @@
                      "--dirty"
                      "--watch")
          :env (list :NODE_ENV "test"
-                    :LOG_LEVEL "info"
                     :prettyPrint "true")
          :name "Node::Mocha::Watch File")))
 
