@@ -29,16 +29,19 @@
 (after! dap-node
   (dap-node-setup)
   (dap-register-debug-template
-   "Node::Mocha::Specs"
+   "Node::Mocha::Watch File"
    (list :type "node"
          :request "launch"
          :program "/usr/local/bin/mocha"
-         :args (list "**/*.spec.js"
-                     "--inline-diffs"
+         :args (list "--inline-diffs"
+                     "--no-colors"
+                     (format "%s" buffer-file-name)
                      "--dirty"
                      "--watch")
-         :env (list :prettyPrint "true")
-         :name "Node::Mocha::Specs")))
+         :env (list :NODE_ENV "test"
+                    :LOG_LEVEL "info"
+                    :prettyPrint "true")
+         :name "Node::Mocha::Watch File")))
 
 ;; Custom Key Bindings
 (map!
