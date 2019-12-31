@@ -1,12 +1,12 @@
 ;;; ~/.doom.d/config.el -*- lexical-binding: t; -*-
 
 ;; Place your private configuration here
-(setq doom-theme 'doom-dracula)
-(setq display-line-numbers-type nil)
 (menu-bar-mode 1)
 (global-visual-line-mode 1)
-
+(setq doom-theme 'doom-dracula)
+(setq display-line-numbers-type nil)
 (setq doom-font (font-spec :family "Cascadia Code" :size 13))
+(setq rustic-format-on-save t)
 
 ;; Flycheck
 (eval-after-load 'flycheck '(flycheck-clojure-setup))
@@ -40,6 +40,7 @@
          :env (list :NODE_ENV "test"
                     :prettyPrint "true")
          :name "Node::Mocha::Watch File")))
+
 
 ;; Custom Key Bindings
 (map!
