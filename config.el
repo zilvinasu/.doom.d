@@ -5,7 +5,7 @@
 (global-visual-line-mode 1)
 (setq doom-theme 'doom-dracula)
 (setq display-line-numbers-type nil)
-(setq doom-font (font-spec :family "Cascadia Code" :size 13))
+(setq doom-font (font-spec :family "JetBrains Mono" :size 13))
 (setq rustic-format-on-save t)
 
 ;; Flycheck
