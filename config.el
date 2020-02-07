@@ -26,6 +26,9 @@
     :desc "DAP debug" "h d" #'dap-debug
     :desc "DAP hydra" "h h" #'dap-hydra)))
 
+(after! dap-go
+  (dap-go-setup))
+
 (after! dap-node
   (dap-node-setup)
   (dap-register-debug-template
