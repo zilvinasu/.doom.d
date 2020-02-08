@@ -4,7 +4,7 @@
 (menu-bar-mode 1)
 (global-visual-line-mode 1)
 (setq doom-theme 'doom-dracula)
-(setq display-line-numbers-type nil)
+(setq display-line-numbers-type 'relative)
 (setq doom-font (font-spec :family "JetBrains Mono" :size 13))
 (setq rustic-format-on-save t)
 
