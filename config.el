@@ -3,16 +3,17 @@
 ;; Place your private configuration here
 (menu-bar-mode 1)
 (global-visual-line-mode 1)
-(setq doom-theme 'doom-dracula)
-(setq display-line-numbers-type 'relative)
-(setq doom-font (font-spec :family "JetBrains Mono" :size 13))
+(setq doom-theme 'doom-dracula
+      display-line-numbers-type 'relative
+      doom-font (font-spec :family "JetBrains Mono" :size 13))
 
 ;; rustic
 (setq rustic-format-on-save t)
 
 ;; lsp
-(setq lsp-diagnostic-package :none)
-(setq lsp-ui-sideline-show-code-actions nil)
+(setq
+ lsp-diagnostic-package :none
+ lsp-ui-sideline-show-code-actions nil)
 
 (add-hook 'clojure-mode-hook #'lsp!)
 (add-hook 'clojurec-mode-hook #'lsp!)
