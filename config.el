@@ -14,9 +14,9 @@
 (setq lsp-diagnostic-package :none)
 (setq lsp-ui-sideline-show-code-actions nil)
 
-(add-hook 'clojure-mode-hook #'lsp)
-(add-hook 'clojurec-mode-hook #'lsp)
-(add-hook 'clojurescript-mode-hook #'lsp)
+(add-hook 'clojure-mode-hook #'lsp!)
+(add-hook 'clojurec-mode-hook #'lsp!)
+(add-hook 'clojurescript-mode-hook #'lsp!)
 
 (after! lsp-mode
   (dolist (m '(clojure-mode
