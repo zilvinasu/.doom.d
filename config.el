@@ -6,17 +6,28 @@
 (setq doom-theme 'doom-dracula)
 (setq display-line-numbers-type 'relative)
 (setq doom-font (font-spec :family "JetBrains Mono" :size 13))
+
+;; rustic
 (setq rustic-format-on-save t)
 
-;; Flycheck
-(eval-after-load 'flycheck '(flycheck-clojure-setup))
-(eval-after-load 'flycheck
-  '(setq flycheck-display-errors-function #'flycheck-pos-tip-error-messages))
+;; lsp
+(setq lsp-diagnostic-package :none)
+(setq lsp-ui-sideline-show-code-actions nil)
 
-;; DAP
+(add-hook 'clojure-mode-hook #'lsp)
+(add-hook 'clojurec-mode-hook #'lsp)
+(add-hook 'clojurescript-mode-hook #'lsp)
+
+(after! lsp-mode
+  (dolist (m '(clojure-mode
+               clojurec-mode
+               clojurescript-mode
+               clojurex-mode))
+    (add-to-list 'lsp-language-id-configuration (cons m "clojure"))))
+
+;; dap-mode
 (after! lsp-mode
   (require 'dap-mode))
-
 (after! dap-mode
   (dap-tooltip-mode 1)
   (tooltip-mode 1)
@@ -44,8 +55,7 @@
                     :prettyPrint "true")
          :name "Node::Mocha::Watch File")))
 
-
-;; Custom Key Bindings
+;; custom kbds
 (map!
  :leader
  (:prefix "p"
