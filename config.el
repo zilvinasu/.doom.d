@@ -3,9 +3,12 @@
 ;; Place your private configuration here
 (menu-bar-mode 1)
 (global-visual-line-mode 1)
-(setq doom-theme 'doom-dracula
-      display-line-numbers-type 'relative
-      doom-font (font-spec :family "JetBrains Mono" :size 13))
+(setq
+ company-idle-delay 0.2
+ company-minimum-prefix-length 2
+ doom-theme 'doom-dracula
+ display-line-numbers-type 'relative
+ doom-font (font-spec :family "JetBrains Mono" :size 13))
 
 ;; rustic
 (setq rustic-format-on-save t)
