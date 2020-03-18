@@ -8,7 +8,9 @@
  company-minimum-prefix-length 2
  doom-theme 'doom-one-light
  display-line-numbers-type 'relative
- doom-font (font-spec :family "JetBrains Mono" :size 13))
+ doom-font (font-spec :family "JetBrains Mono" :size 13)
+ mac-option-modifier 'super
+ mac-command-modifier 'meta)
 
 ;; rustic
 (setq rustic-format-on-save t)
