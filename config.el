@@ -6,7 +6,7 @@
 (setq
  company-idle-delay 0.2
  company-minimum-prefix-length 2
- doom-theme 'doom-dracula
+ doom-theme 'doom-one-light
  display-line-numbers-type 'relative
  doom-font (font-spec :family "JetBrains Mono" :size 13))
 
