@@ -4,7 +4,7 @@
 (menu-bar-mode 1)
 (global-visual-line-mode 1)
 (setq
- company-idle-delay 0.2
+ company-idle-delay 0.1
  company-minimum-prefix-length 2
  doom-theme 'doom-dracula
  display-line-numbers-type 'relative
