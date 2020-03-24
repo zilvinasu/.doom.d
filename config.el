@@ -6,7 +6,7 @@
 (setq
  company-idle-delay 0.1
  company-minimum-prefix-length 2
- doom-theme 'doom-dracula
+ doom-theme 'doom-nord
  display-line-numbers-type 'relative
  doom-font (font-spec :family "JetBrains Mono" :size 13)
  mac-option-modifier 'super
