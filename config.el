@@ -16,6 +16,7 @@
 (setq rustic-format-on-save t)
 
 ;; lsp
+(setq lsp-diagnostic-package :none)
 (add-hook 'clojure-mode-hook #'lsp!)
 (add-hook 'clojurec-mode-hook #'lsp!)
 (add-hook 'clojurescript-mode-hook #'lsp!)
